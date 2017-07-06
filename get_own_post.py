@@ -1,5 +1,5 @@
 import requests
-from constant_variable import *
+from constant_variable import APP_ACCESS_TOKEN ,BASE_URL
 import urllib
 
 def get_own_post():
@@ -13,7 +13,7 @@ def get_own_post():
             image_url = own_media['data'][0]['images']['standard_resolution']['url']
             urllib.urlretrieve(image_url, image_name)
             print("\n\n")
-            print 'Your image has been downloaded!....to.....C:\Users\DELL\PycharmProjects\instabot...'
+            print "Your Recent image has been downloaded to C:\Users\Game Is Here\PycharmProjects\InstaBot"
         else:
             print 'Post does not exist!'
     else:

@@ -1,6 +1,6 @@
 import requests
-from constant_variable import *
-from get_user_id import *
+from constant_variable import APP_ACCESS_TOKEN ,BASE_URL
+from get_user_id import get_user_id
 
 
 def get_user_info(insta_username):

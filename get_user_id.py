@@ -1,5 +1,5 @@
 import requests
-from constant_variable import *
+from constant_variable import APP_ACCESS_TOKEN ,BASE_URL
 
 
 def get_user_id(insta_username):
