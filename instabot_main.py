@@ -2,7 +2,7 @@ from get_user_post import get_user_post
 from get_own_post import get_own_post
 from get_user_info import get_user_info
 from like_user_post import like_user_post
-from comment_user_post import comment_user_post
+from comment_user_post import comment_user_post1
 from self_info import self_info
 
 print("\t\t\t*****Welcome To InstaBot*****")
@@ -48,8 +48,7 @@ while show_menu:
 
         elif menu_choice == 6:
             insta_username = raw_input("Enter Username.........\n")
-            comment_user_post(insta_username)
-            print("wait work under process.......")
+            comment_user_post1(insta_username)
             print("\n")
             print("\n")
 
