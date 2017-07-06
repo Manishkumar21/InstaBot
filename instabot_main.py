@@ -5,6 +5,8 @@ from get_user_info import get_user_info
 print("\t\t\t*****Welcome To InstaBot*****")
 menu_choices = "What do you want to do. Select from the below Choices (1-6) \n\t1. Like A Post \n\t2. Comment on a post \n\t3. Download Own Post "\
                "\n\t4. Download Friend's post \n\t5. Get Friend Info. \n\t6. Close Application \n"
+show_menu = True
+while show_menu:
 menu_choice = input(menu_choices)
 if (menu_choice) > 0:
     menu_choice = int(menu_choice)
@@ -43,3 +45,5 @@ if (menu_choice) > 0:
     elif menu_choice == 6:
         print "Thanks"
         exit()
+    else:
+        show_menu = False
