@@ -1,5 +1,5 @@
 import requests
-from constants import *
+from constant_variable import *
 from get_user_id import *
 
 
