@@ -22,55 +22,56 @@ menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
 show_menu = True
 while show_menu:
     menu_choice = input(menu_choices)
+    if (menu_choice) > 0:
+        menu_choice = int(menu_choice)
 
-    if menu_choice == "1":
-        self_info()
-        print("\n\n")
+        if menu_choice == 1:
+            self_info()
+            print("\n\n")
 
-    elif menu_choice == "2":
-        print (".....Downloading Your Own Recent Post.....\n")
-        get_own_post()
-        print("\n")
+        elif menu_choice == 2:
+            print (".....Downloading Your Own Recent Post.....\n")
+            get_own_post()
+            print("\n")
 
-    elif menu_choice == "3":
-        insta_username = raw_input("Enter The Username Who's Information You Want. \n")
-        print("Wait ** Information is Downloading...")
-        get_user_info(insta_username)
-        print("\n")
+        elif menu_choice == 3:
+            insta_username = raw_input("Enter The Username Who's Information You Want. \n")
+            print("Wait ** Information is Downloading...")
+            get_user_info(insta_username)
+            print("\n")
 
-    elif menu_choice == "4":
-        insta_username = raw_input("Enter The Username Who's Recent Post You Want To Download. \n")
-        print("Wait ** User's Recent Post is Downloading...")
-        get_user_post(insta_username)
-        print("\n")
+        elif menu_choice == 4:
+            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Download. \n")
+            print("Wait ** User's Recent Post is Downloading...")
+            get_user_post(insta_username)
+            print("\n")
 
-    elif menu_choice == "5":
-        insta_username = raw_input("Enter The Username Who's Recent Post You Want To Like. ")
-        print("Wait ** Liking The User's Recent Post...")
-        like_user_post(insta_username)
-        print("\n")
+        elif menu_choice == 5:
+            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Like. ")
+            print("Wait ** Liking The User's Recent Post...")
+            like_user_post(insta_username)
+            print("\n")
 
-    elif menu_choice == "6":
-        insta_username = raw_input("Enter The Username Who's Recent Post You Want To Write Something. \n")
-        print("Wait ** Commenting in the User's Recent Post...")
-        comment_user_post1(insta_username)
-        print("\n")
+        elif menu_choice == 6:
+            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Write Something. \n")
+            print("Wait ** Commenting in the User's Recent Post...")
+            comment_user_post1(insta_username)
+            print("\n")
 
-    elif menu_choice == "7":
-        insta_username = raw_input("Enter The Username Who's Recent Post's Comments You Want to Show \n")
-        print("Wait ** Fetching the User's Recent Comment...")
-        show_all_comment(insta_username)
-        print("\n")
+        elif menu_choice == 7:
+            insta_username = raw_input("Enter The Username Who's Recent Post's Comments You Want to Show \n")
+            print("Wait ** Fetching the User's Recent Comment...")
+            show_all_comment(insta_username)
+            print("\n")
 
-    elif menu_choice == "8":
-        insta_username = raw_input("Enter The Username Who's Recent Post You Want To Delete Something. \n")
-        print("Wait ** Deleting the User's Recent Comment...")
-        delete_negative_comment(insta_username)
-        print("\n")
+        elif menu_choice == 8:
+            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Delete Something. \n")
+            print("Wait ** Deleting the User's Recent Comment...")
+            delete_negative_comment(insta_username)
+            print("\n")
 
-    elif menu_choice == "9":
-        exit()
+        elif menu_choice == 9:
+            exit()
 
-    else:
-        print "\nWrong Input"
-        show_menu = False
+        else:
+            show_menu = False

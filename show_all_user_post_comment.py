@@ -3,6 +3,7 @@ from constant_variable import APP_ACCESS_TOKEN ,BASE_URL
 from get_post_id import get_post_id
 from textblob import TextBlob
 from textblob.sentiments import NaiveBayesAnalyzer
+import matplotlib.pyplot as plt
 
 def show_all_comment(insta_username):
     media_id = get_post_id(insta_username)
@@ -22,5 +23,28 @@ def show_all_comment(insta_username):
                     print 'Positive comment : %s' % (comment_text)
         else:
             print 'There are no existing comments on the post!'
+
+
+        print "*****Here is the Pie-Chart Analysis of Positive and Negaative Comments.*****"
+        var1 = blob.sentiment.p_neg
+        var2 = blob.sentiment.p_pos
+        str_var1 = str(var1)
+        str_var2 = str(var2)
+        str_var1 = len(str_var1)
+        str_var2 = len(str_var2)
+        labels = 'Positive Comments', 'Negative Comments'
+        sizes = [str_var1, str_var2]
+        explode = (0, 0.1)  # only "explode" the 2nd slice (i.e. 'Negative Comment')
+        fig1, ax1 = plt.subplots()
+        ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
+                shadow=True, startangle=90)
+        ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+        plt.show()
+
+
     else:
          print 'Status code other than 200 received!'
+
+
+
+# Pie chart, where the slices will be ordered and plotted counter-clockwise:
