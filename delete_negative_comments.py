@@ -28,7 +28,7 @@ def delete_negative_comment(insta_username):
                     else:
                         print 'Unable to delete comment!'
                 else:
-                    print 'Positive comment : %s\n' % (comment_text)
+                    print 'Positive comment : %s' % (comment_text)
         else:
             print 'There are no existing comments on the post!'
     else:
