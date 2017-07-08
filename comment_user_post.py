@@ -1,10 +1,9 @@
 import requests
 from constant_variable import APP_ACCESS_TOKEN ,BASE_URL
 from get_user_id import get_user_id
-from get_user_post import get_user_post
 
 def comment_user_post1(insta_username):
-    post_id = get_user_post(insta_username)
+    post_id = get_user_id(insta_username)
     print(post_id)
     message = raw_input("Enter ur comment....\n")
     request_url = (BASE_URL + 'media/%s/comments') % (post_id)
