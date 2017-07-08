@@ -4,8 +4,7 @@ from get_user_info import get_user_info
 from like_user_post import like_user_post
 from comment_user_post import comment_user_post1
 from self_info import self_info
-from delete_comment import delete_comment_by_word
-from delete_negative_comment import delete_negative_comment
+from delete_negative_comments import delete_negative_comment
 
 print("\t\t\t*****Welcome To InstaBot*****\n")
 menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
