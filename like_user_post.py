@@ -1,9 +1,13 @@
+# Files and Functions are Imported
+
 import requests
 from constant_variable import APP_ACCESS_TOKEN ,BASE_URL
 from get_post_id import get_post_id
 
 
 def like_user_post(insta_username):
+    # Function Logic to Like User's Recent Post
+
     media_id = get_post_id(insta_username)
     print(media_id)
     request_url = (BASE_URL + "media/"+media_id+"/likes")

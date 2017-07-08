@@ -1,9 +1,10 @@
+# Files and Functions are Imported
+
 import requests
 from constant_variable import APP_ACCESS_TOKEN ,BASE_URL
 
-
 def get_user_id(insta_username):
-    #function logic
+    # Function Logic to get user id
     request_url = (BASE_URL + 'users/search?q=%s&access_token=%s') % (insta_username, APP_ACCESS_TOKEN)
     print 'GET request url : %s' % (request_url)
     user_info = requests.get(request_url).json()

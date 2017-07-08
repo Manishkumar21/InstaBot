@@ -1,10 +1,11 @@
+# Files and Functions are Imported
+
 import requests
 from constant_variable import APP_ACCESS_TOKEN ,BASE_URL
 from get_user_id import get_user_id
 
-
 def get_user_info(insta_username):
-    #function logic here
+    # Function Logic to get user profile Information
     user_id = get_user_id(insta_username)
     if user_id == None:
         print 'User does not exist!'
@@ -23,4 +24,3 @@ def get_user_info(insta_username):
             print 'There is no data for this user!'
     else:
         print 'Status code other than 200 received!'
-#get_user_info(insta_username="radhika12344")

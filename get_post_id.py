@@ -1,9 +1,12 @@
+# Files and Functions are Imported
 from get_user_id import get_user_id
 from constant_variable import BASE_URL,APP_ACCESS_TOKEN
 import requests
 
 def get_post_id(insta_username):
-    user_id = get_user_id(insta_username)
+    # Function Logic to show the post id
+
+    user_id = get_user_id(insta_username)   #Get the User's Id
     if user_id == None:
         print 'User does not exist!'
         exit()
