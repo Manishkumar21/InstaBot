@@ -10,7 +10,7 @@ def get_user_post(insta_username):
 
     user_id = get_user_id(insta_username)        #Get the User's Id
     if user_id == None:
-        print 'User does not exist!'
+        print '\n\t\t*****User does not exist!*****'
         exit()
     request_url = (BASE_URL + 'users/%s/media/recent/?access_token=%s') % (user_id, APP_ACCESS_TOKEN)
     print 'GET request url : %s' % (request_url)
@@ -26,6 +26,6 @@ def get_user_post(insta_username):
             return user_media['data'][0]['id']
 
         else:
-            print 'Post does not exist!'
+            print '\n\t\t*****Post does not exist!*****'
     else:
-        print 'Status code other than 200 received!'
+        print '\n\t\t*****Status code other than 200 received!*****'

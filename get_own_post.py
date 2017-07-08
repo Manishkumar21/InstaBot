@@ -17,6 +17,6 @@ def get_own_post():
             urllib.urlretrieve(image_url, image_name)
             print "\n\t\t*****Your Recent image has been downloaded to C:\Users\Game Is Here\PycharmProjects\InstaBot*****"
         else:
-            print 'Post does not exist!'
+            print '\n\t\t*****There Are No Post!*****'
     else:
-        print 'Status code other than 200 received!'
+        print '\n\t\t*****Status code other than 200 received!*****'

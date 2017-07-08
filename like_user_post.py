@@ -16,4 +16,4 @@ def like_user_post(insta_username):
     if post_a_like['meta']['code'] == 200:
         print '\n\t\t*****Like was successful!*****'
     else:
-        print 'Your like was unsuccessful. Try again!'
+        print '\n\t\t*****Your like was unsuccessful. Try again!*****'

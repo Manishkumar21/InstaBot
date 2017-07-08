@@ -26,7 +26,7 @@ def show_all_comment(insta_username):
                 else:
                     print '\t(+)Positive comment : %s' % (comment_text)
         else:
-            print '\tThere are no existing comments on the post!'
+            print '\t*****There are no existing comments on the post!*****'
 
     #Plot the pie-Chart
 
@@ -47,4 +47,4 @@ def show_all_comment(insta_username):
         plt.show()
 
     else:
-         print 'Status code other than 200 received!'
+         print '\n\t\t*****Status code other than 200 received!*****'

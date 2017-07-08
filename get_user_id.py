@@ -16,5 +16,5 @@ def get_user_id(insta_username):
         else:
             return None
     else:
-        print 'Status code other than 200 received!'
+        print '\n\t\t*****Status code other than 200 received!*****'
         exit()

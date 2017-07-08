@@ -30,6 +30,6 @@ def delete_negative_comment(insta_username):
                     else:
                         print '\t\t\t*****Unable to delete comment!*****\n'
         else:
-            print 'There are no existing comments on the post!'
+            print '\n\t\t\t*****There are no existing comments on the post!*****'
     else:       #if Page Not Found
-         print 'Status code other than 200 received!'
+         print '\n\t\t\t*****Status code other than 200 received!*****'
