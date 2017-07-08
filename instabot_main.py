@@ -4,6 +4,8 @@ from get_user_info import get_user_info
 from like_user_post import like_user_post
 from comment_user_post import comment_user_post1
 from self_info import self_info
+from delete_comment import delete_comment_by_word
+from delete_negative_comment import delete_negative_comment
 
 print("\t\t\t*****Welcome To InstaBot*****\n")
 menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
@@ -13,7 +15,8 @@ menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
                "\n\t\t4. Download User's Recent Post " \
                "\n\t\t5. Like User's Post" \
                " \n\t\t6. Comment on User's Post " \
-               "\n\t\t7. Close Application  "
+                " \n\t\t7. Delete Comment From User's Post " \
+               "\n\t\t8. Close Application  "
 
 show_menu = True
 while show_menu:
@@ -54,7 +57,13 @@ while show_menu:
             comment_user_post1(insta_username)
             print("\n")
 
-        elif menu_choice == 6:
+        elif menu_choice == 7:
+            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Delete Something. \n")
+            print("Wait ** Deleting the User's Recent Comment...")
+            delete_negative_comment(insta_username)
+            print("\n")
+
+        elif menu_choice == 8:
             exit()
 
         else:
