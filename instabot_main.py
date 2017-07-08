@@ -6,9 +6,14 @@ from comment_user_post import comment_user_post1
 from self_info import self_info
 
 print("\t\t\t*****Welcome To InstaBot*****\n")
-menu_choices = "What do you want to do. Select from the below Choices (1-6)\n\n\t\t1. Show Own Profile  \n\t\t2. Download Own Post " \
-               "\n\t\t3. Get User's Information. \n\t\t4. Download User's Recent Post \n\t\t5. Like User's Post" \
-               " \n\t\t6. Comment on User's Post \n\t\t7. Close Application  "
+menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
+               "\n\n\t\t1. Show Own Profile  " \
+               "\n\t\t2. Download Own Post " \
+               "\n\t\t3. Get User's Information. " \
+               "\n\t\t4. Download User's Recent Post " \
+               "\n\t\t5. Like User's Post" \
+               " \n\t\t6. Comment on User's Post " \
+               "\n\t\t7. Close Application  "
 
 show_menu = True
 while show_menu:
