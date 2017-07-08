@@ -14,6 +14,6 @@ def like_user_post(insta_username):
     payload = {"access_token" : APP_ACCESS_TOKEN}
     post_a_like = requests.post(request_url,payload).json()
     if post_a_like['meta']['code'] == 200:
-        print 'Like was successful!'
+        print '\n\t\t*****Like was successful!*****'
     else:
         print 'Your like was unsuccessful. Try again!'

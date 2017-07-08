@@ -9,7 +9,7 @@ def delete_negative_comment(insta_username):
     # Function Logic to Delete Negative Comments..
     media_id = get_post_id(insta_username)
     request_url = (BASE_URL + 'media/%s/comments/?access_token=%s') % (media_id, APP_ACCESS_TOKEN)
-    print 'GET request url : %s' % (request_url)
+    print 'GET request url : %s\n' % (request_url)
     comment_info = requests.get(request_url).json()
 
     if comment_info['meta']['code'] == 200:     #Check if there are Negative Comments Using textblob.sentiments Library
@@ -19,18 +19,16 @@ def delete_negative_comment(insta_username):
                 comment_text = comment_info['data'][x]['text']
                 blob = TextBlob(comment_text, analyzer=NaiveBayesAnalyzer())
                 if (blob.sentiment.p_neg > blob.sentiment.p_pos):
-                    print 'Negative comment : %s' % (comment_text)
+                    print '\t(-)Negative comment : %s' % (comment_text)
                     delete_url = (BASE_URL + 'media/%s/comments/%s/?access_token=%s') % (
                     media_id, comment_id, APP_ACCESS_TOKEN)
                     print 'DELETE request url : %s' % (delete_url)
                     delete_info = requests.delete(delete_url).json()
 
                     if delete_info['meta']['code'] == 200:      #Check if negative comments are deleted or not
-                        print 'Comment successfully deleted!\n'
+                        print '\t\t\t*****Comment successfully deleted!*****\n'
                     else:
-                        print 'Unable to delete comment!'
-                else:
-                    print 'Positive comment : %s' % (comment_text)
+                        print '\t\t\t*****Unable to delete comment!*****\n'
         else:
             print 'There are no existing comments on the post!'
     else:       #if Page Not Found

@@ -12,7 +12,7 @@ from show_all_user_post_comment import show_all_comment
 
 #   <-------------------------InstaBot Application Starts From Here------------------------>
 
-print("\t\t\t*****Welcome To InstaBot*****\n")
+print("\n\t\t\t<------------*****Welcome To InstaBot Application*****------------>\n")
 
 # Ask What you Want to do
 menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
@@ -38,55 +38,55 @@ while show_menu:        #if user enter valid key
             print("\n\n")
 
         elif menu_choice == 2:
-            print (".....Downloading Your Own Recent Post.....\n")
+            print ("\n\t$$$$$ Downloading Your Own Recent Post.....\n")
             # Control Goes to get_own_post.py
             get_own_post()
             print("\n")
 
         elif menu_choice == 3:
-            insta_username = raw_input("Enter The Username Who's Information You Want. \n")
-            print("Wait ** Information is Downloading...")
+            insta_username = raw_input("\nEnter The Username Who's Information You Want. \n")
+            print("\t\tWait ** Information is Downloading...\n")
             # Control Goes to get_user_info.py
             get_user_info(insta_username)
             print("\n")
 
         elif menu_choice == 4:
-            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Download. \n")
-            print("Wait ** User's Recent Post is Downloading...")
+            insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Download. \n")
+            print("\t\tWait ** User's Recent Post is Downloading...\n")
             # Control Goes to get_user_post.py
             get_user_post(insta_username)
             print("\n")
 
         elif menu_choice == 5:
-            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Like. ")
-            print("Wait ** Liking The User's Recent Post...")
+            insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Like. \n")
+            print("\t\tWait ** Liking The User's Recent Post...\n")
             # Control Goes to like_user_post.py
             like_user_post(insta_username)
             print("\n")
 
         elif menu_choice == 6:
-            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Write Something. \n")
-            print("Wait ** Commenting in the User's Recent Post...")
+            insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Write Something. \n")
+            print("\t\tWait ** Commenting in the User's Recent Post...")
             # Control Goes to comment_user_post.py
             comment_user_post1(insta_username)
             print("\n")
 
         elif menu_choice == 7:
-            insta_username = raw_input("Enter The Username Who's Recent Post's Comments You Want to Show \n")
-            print("Wait ** Fetching the User's Recent Comment...")
+            insta_username = raw_input("\nEnter The Username Who's Recent Post's Comments You Want to Show \n")
+            print("\t\tWait ** Fetching the User's Recent Comment...\n")
             # Control Goes to show_all_user_comment.py
             show_all_comment(insta_username)
             print("\n")
 
         elif menu_choice == 8:
-            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Delete Something. \n")
-            print("Wait ** Deleting the User's Recent Comment...")
+            insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Delete Something. \n")
+            print("\t\tWait ** Deleting the User's Recent Comment...\n")
             # Control Goes to delete_negative_comment.py
             delete_negative_comment(insta_username)
             print("\n")
 
         elif menu_choice == 9:
-            print "\n\t\t******Thanks To Be With Us*****"
+            print "\n\t\t<------------*****Thanks To Be With Us*****------------>"
             exit()
 
         else:

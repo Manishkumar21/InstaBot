@@ -11,7 +11,7 @@ def show_all_comment(insta_username):
 
     media_id = get_post_id(insta_username)
     request_url = (BASE_URL + 'media/%s/comments/?access_token=%s') % (media_id, APP_ACCESS_TOKEN)
-    print 'GET request url : %s' % (request_url)
+    print 'GET request url : %s\n' % (request_url)
     comment_info = requests.get(request_url).json()
 
     if comment_info['meta']['code'] == 200:     #Check if there are negative and positive comments..
@@ -22,15 +22,15 @@ def show_all_comment(insta_username):
                 comment_text = comment_info['data'][x]['text']
                 blob = TextBlob(comment_text, analyzer=NaiveBayesAnalyzer())
                 if (blob.sentiment.p_neg > blob.sentiment.p_pos):
-                    print 'Negative comment : %s' % (comment_text)
+                    print '\t(-)Negative comment : %s' % (comment_text)
                 else:
-                    print 'Positive comment : %s' % (comment_text)
+                    print '\t(+)Positive comment : %s' % (comment_text)
         else:
-            print 'There are no existing comments on the post!'
+            print '\tThere are no existing comments on the post!'
 
     #Plot the pie-Chart
 
-        print "*****Here is the Pie-Chart Analysis of Positive and Negaative Comments.*****"
+        print "\n\t*****Here is the Pie-Chart Analysis of Positive and Negative Comments.*****"
         var1 = blob.sentiment.p_neg
         var2 = blob.sentiment.p_pos
         str_var1 = str(var1)
