@@ -16,8 +16,10 @@ from termcolor import colored
 
 
 list=['grey','red','green','yellow','blue','magenta','cyan']
-color_text = colored("\n\t\t\t<------------*****Welcome To InstaBot Application*****------------>\n",list[4])
-print color_text
+color_text =  colored("\n\t\t\t\t\t<------------****||$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$||*****------------>",list[1])
+color_text2 = colored("\n\t\t\t\t\t<------------****||Welcome To InstaBot Application||*****------------>",list[4])
+color_text3 = colored("\n\t\t\t\t\t<------------****||$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$||*****------------>\n",list[6])
+print color_text,color_text2,color_text3
 
 
 # Ask What you Want to do
