@@ -14,8 +14,11 @@ from termcolor import colored
 
 #   <-------------------------InstaBot Application Starts From Here------------------------>
 
-color_text = colored("\n\t\t\t<------------*****Welcome To InstaBot Application*****------------>\n","blue")
+
+list=['grey','red','green','yellow','blue','magenta','cyan']
+color_text = colored("\n\t\t\t<------------*****Welcome To InstaBot Application*****------------>\n",list[4])
 print color_text
+
 
 # Ask What you Want to do
 menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
@@ -24,14 +27,26 @@ menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
                "\n\t\t3. Get User's Profile Information. " \
                "\n\t\t4. Download User's Recent Post " \
                "\n\t\t5. Like User's Recent Post" \
-               " \n\t\t6. Comment on User's Recent Post " \
-                " \n\t\t7. Show Comments From User's Recent Post " \
-                " \n\t\t8. Delete Negative Comments From User's Recent Post " \
+               "\n\t\t6. Comment on User's Recent Post " \
+               "\n\t\t7. Show Comments From User's Recent Post " \
+               "\n\t\t8. Delete Negative Comments From User's Recent Post " \
                "\n\t\t9. Close Application  "
+
+
+
+i=0
 
 show_menu = True
 while show_menu:        #if user enter valid key
-    menu_choice = input(menu_choices)
+    while i < 7:
+        color_text = colored(menu_choices, list[i])
+        if i == 6:
+            i = 0
+        i = i + 1
+        print color_text
+        break
+
+    menu_choice = input()
     if (menu_choice) > 0:
         menu_choice = int(menu_choice)
 
